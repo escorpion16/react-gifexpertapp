@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp = () => {
+export const GifExpertApp = ( {defaultCategory = []} ) => {
 
-    const [categories, setCategories] = useState(['One Punch'])
+    const [categories, setCategories] = useState( defaultCategory ) 
 
     return (
         <>
@@ -26,5 +26,3 @@ const GifExpertApp = () => {
         </>
     )
 }
-
-export default GifExpertApp;
